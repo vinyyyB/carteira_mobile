@@ -15,6 +15,68 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:text="Saldo: R$ 0,00"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <!-- Busca por descrição -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etBusca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:hint="Buscar por descrição"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buscar"
+            android:text="Buscar" />
+    </LinearLayout>
+
+    <!-- Filtros -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="filtrarTodos"
+            android:text="Todos" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:onClick="filtrarReceitas"
+            android:text="Receitas" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:onClick="filtrarDespesas"
+            android:text="Despesas" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/lvTransacoes"
         android:layout_width="match_parent"

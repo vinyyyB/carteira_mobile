@@ -23,6 +23,7 @@
         android:minHeight="48dp"
         android:hint="Descrição (ex: Salário, Mercado)"
         android:inputType="textCapSentences"
+        android:maxLength="50"
         android:textSize="20sp" />
 
     <EditText
@@ -31,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:minHeight="48dp"
-        android:hint="Valor (R$)"
-        android:inputType="numberDecimal"
+        android:hint="Valor (R$ 0,00)"
+        android:inputType="number"
         android:textSize="20sp" />
 
     <RadioGroup
@@ -64,9 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:minHeight="48dp"
-        android:hint="Data (dd/mm/aaaa)"
-        android:inputType="date"
-        android:maxLength="10"
+        android:hint="Data"
+        android:focusable="false"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:inputType="none"
         android:textSize="20sp" />
 
     <Button
